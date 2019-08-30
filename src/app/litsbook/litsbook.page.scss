@@ -1,0 +1,53 @@
+.my-custom-menu {
+    --width: 500px;
+  }
+  body {
+    cursor: url('https://ionicframework.com/img/finger.png'), auto;
+  }
+  
+  .scrollable{
+    height: 200px;
+    border: 2px solid red;
+  } 
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    overflow: hidden;
+  }
+  
+  .ion-color-orange {
+    --ion-color-base: var(--ion-color-orange);
+    --ion-color-base-rgb: var(--ion-color-orange-rgb);
+    --ion-color-contrast: var(--ion-color-orange-contrast);
+    --ion-color-contrast-rgb: var(--ion-color-orange-contrast-rgb);
+    --ion-color-shade: var(--ion-color-orange-shade);
+    --ion-color-tint: var(--ion-color-orange-tint);
+  }
+
+  .orange {
+    --background-color: blanchedalmond; 
+  }
+
+  .ioconedoc  {
+    max-width: 100%;
+    max-height: 100%;
+    width: 35px;
+    height: auto;    
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    }
+
+  .datepicker{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .readcolor{
+    --ion-background-color: #f4f4f4;
+  }

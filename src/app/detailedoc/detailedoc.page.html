@@ -1,0 +1,67 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>รายละเอียด</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- detail card -->
+  <ion-card>
+    <ion-card-content>
+        <ion-row justify-content-around>
+            <ion-chip color="success" *ngIf="docdetail.Hast=='ปกติ'" mode='ios'>
+              <ion-label>ปกติ</ion-label>
+            </ion-chip>
+            <ion-chip color="warning" *ngIf="docdetail.Hast=='ด่วน'" mode='ios'>
+              <ion-icon name="warning"></ion-icon>
+              <ion-label>ด่วน</ion-label>
+            </ion-chip>
+            <ion-chip color="orange" *ngIf="docdetail.Hast=='ด่วนมาก'" mode='ios'>
+              <ion-icon name="warning"></ion-icon>
+              <ion-label>ด่วนมาก</ion-label>
+            </ion-chip>
+            <ion-chip color="danger" *ngIf="docdetail.Hast=='ด่วนที่สุด'" mode='ios'>
+              <ion-icon name="warning"></ion-icon>
+              <ion-label>ด่วนที่สุด</ion-label>
+            </ion-chip>
+          </ion-row>
+      <h2>เลขที่หนังสือ : {{docdetail.DocNumber}}</h2>
+      <h2>เรื่อง : {{docdetail.Docname}}</h2>
+      <h3>วันที่หนังสือ : {{docdetail.Docdate}}</h3>
+      <h3>รับวันที่ : {{docdetail.DocRegisdate}}</h3>
+      <h3>ดำเนินการให้แล้วเสร็จในวันที่ : {{docdetail.DocExcutedate}}</h3>
+      <h3>เลขที่ : {{doctree[0].SentNo}}</h3>      
+    </ion-card-content>
+  </ion-card>
+  <!-- Tree card -->
+  <ion-card>
+    <ion-card-content>
+      Tree
+    </ion-card-content>
+  </ion-card>
+  <!-- comment card -->
+
+  <ion-card>
+    <ion-card *ngFor="let edata of doccomment">
+      <ion-card-content>
+        <h4 *ngIf="edata.SentByName != '  ()'">จาก : {{edata.SentByName}}</h4>
+        <h4 *ngIf="edata.SentByName == '  ()'">จาก : {{edata.SentByAccount}}</h4>
+        <h4>เรียน : {{edata.Dear}}</h4>
+        <h4>ลงวันที่ : {{functionservice.datethai(edata.SentCommentDate)}}</h4>
+        <h4>ข้อความ : {{edata.SentComment}}</h4>
+
+      </ion-card-content>
+    </ion-card>
+  </ion-card>
+
+</ion-content>
+
+<!-- <h2>จาก : {{docdetail[0].DocNumber}}</h2>          
+              <h2>เรื่อง : {{docdetail[0].Docname}}</h2>
+              <h3>วันที่หนังสือ : {{docdetail[0].Docdate}}</h3>
+              <h3>รับวันที่ : {{docdetail[0].DocRegisdate}}</h3>
+              <h3>ดำเนินการให้แล้วเสร็จในวันที่ : {{docdetail[0].DocExcutedate}}</h3>        
+              <h3>เลขที่ : {{doctree[0].SentNo}}</h3> -->

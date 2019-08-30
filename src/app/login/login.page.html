@@ -1,0 +1,30 @@
+<ion-content class="content" scroll="false">
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-img src="../assets/image/edoc-w-400.png" class="logo"></ion-img>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-card class="card" method=post>
+        <ion-card-content>
+          <ion-list no-line>
+            <ion-item>
+              <ion-label position="stacked"><strong>USERNAME</strong></ion-label>
+              <ion-input type="text" maxlength=22 [(ngModel)]="UserData.username" required></ion-input>
+            </ion-item>
+            <ion-item  style="margin-bottom: 10px;">
+              <ion-label position="stacked"><strong>PASSWORD</strong></ion-label>
+              <ion-input type="password" maxlength=24 [(ngModel)]="UserData.password" required></ion-input>
+            </ion-item>
+            <ion-item style="width: 170px; --border-color:#ffffff !important;">
+              <ion-checkbox  [(ngModel)]="UserData.Remember" color="light" mode="md"></ion-checkbox>
+              <ion-label style="padding-left: 5px;"><strong>Auto Login</strong> </ion-label>
+            </ion-item>
+            <ion-button expand="block" color="tertiary" (click)="Login()"><strong>Login</strong></ion-button>
+          </ion-list>
+        </ion-card-content>
+      </ion-card>
+    </ion-row>
+  </ion-grid>
+</ion-content>
